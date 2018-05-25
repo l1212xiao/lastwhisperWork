@@ -23,9 +23,7 @@ public class Solution {
 
         int maxNum = 0;
         int majNum = nums[0];
-        /*for (Integer val : map.values()) {
-            maxValue = Math.max(val, maxValue);
-        }*/
+
         for (Map.Entry entry : map.entrySet()) {
             if ((Integer) entry.getValue() > maxNum) {
                 maxNum = (Integer) entry.getValue();
