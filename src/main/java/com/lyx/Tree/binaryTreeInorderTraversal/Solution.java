@@ -6,6 +6,7 @@ import java.util.ArrayList;
 
 /**
  * Created by lyx on 2018/5/3.
+ * 递归实现
  */
 class Solution {
     public ArrayList<Integer> inorderTraversal(TreeNode root) {
