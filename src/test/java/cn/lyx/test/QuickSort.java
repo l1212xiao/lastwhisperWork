@@ -8,7 +8,7 @@ public class QuickSort {
     public static void quickSort(int[] arr, int start, int end) {
         if (arr == null) return;
         if (start < end) {
-            int mid = partirion(arr, start, end);
+            int mid = partition(arr, start, end);
             quickSort(arr, start, mid - 1);
             quickSort(arr, mid + 1, end);
         }
@@ -20,7 +20,7 @@ public class QuickSort {
         arr[j] = temp;
     }
 
-    public static int partirion(int[] arr, int start, int end) {
+    public static int partition(int[] arr, int start, int end) {
         int pivote = arr[start];
         while (start < end) {
             while (start < end && pivote < arr[end]) {
