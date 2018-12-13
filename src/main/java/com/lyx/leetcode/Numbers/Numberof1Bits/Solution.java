@@ -1,4 +1,4 @@
-package com.lyx.Numbers.Numberof1Bits;
+package com.lyx.leetcode.Numbers.Numberof1Bits;
 
 import java.util.ArrayList;
 import java.util.List;
