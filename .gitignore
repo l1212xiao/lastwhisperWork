@@ -1,0 +1,10 @@
+.idea/*
+*.iml
+*/target/
+idea
+*.jar
+*.tar
+*.zip
+script/.idea
+*.gz
+target/
