@@ -1,4 +1,4 @@
-package cn.lyx.reverseString;
+package com.lyx.OwnLearning.reverseString;
 
 /**
  * Created by lyx on 2018/7/12.

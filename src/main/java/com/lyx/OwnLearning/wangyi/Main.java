@@ -1,4 +1,4 @@
-package cn.lyx.wangyi;
+package com.lyx.OwnLearning.wangyi;
 
 import java.util.Scanner;
 

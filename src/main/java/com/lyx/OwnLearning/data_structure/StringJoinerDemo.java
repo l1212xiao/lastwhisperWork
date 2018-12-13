@@ -1,4 +1,4 @@
-package cn.lyx.data_structure;
+package com.lyx.OwnLearning.data_structure;
 
 import java.util.StringJoiner;
 

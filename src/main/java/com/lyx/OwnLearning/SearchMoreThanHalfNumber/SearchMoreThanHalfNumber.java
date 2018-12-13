@@ -1,4 +1,4 @@
-package cn.lyx.interview.SearchMoreThanHalfNumber;
+package com.lyx.OwnLearning.SearchMoreThanHalfNumber;
 
 /**
  * Created by lyx on 2018/7/9.
