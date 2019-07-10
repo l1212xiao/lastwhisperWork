@@ -1,4 +1,4 @@
-package com.lyx.String.mergeSortedArray;
+package com.lyx.leetcode.String.mergeSortedArray;
 
 /**
  * Created by lyx on 2018/4/16.

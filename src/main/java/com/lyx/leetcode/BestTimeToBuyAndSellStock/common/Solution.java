@@ -1,4 +1,4 @@
-package com.lyx.BestTimeToBuyAndSellStock.common;
+package com.lyx.leetcode.BestTimeToBuyAndSellStock.common;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,6 +1,6 @@
-package com.lyx.Tree.ConstrucTree;
+package com.lyx.leetcode.Tree.ConstrucTree;
 
-import com.lyx.Tree.TreeNode;
+import com.lyx.leetcode.Tree.TreeNode;
 
 import java.util.Arrays;
 

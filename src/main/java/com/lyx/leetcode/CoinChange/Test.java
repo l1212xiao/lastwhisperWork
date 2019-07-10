@@ -1,4 +1,4 @@
-package com.lyx.DynamicProgramming.CoinChange;
+package com.lyx.leetcode.CoinChange;
 
 /**
  * Created by lyx on 2018/7/5.

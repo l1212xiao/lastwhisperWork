@@ -1,6 +1,6 @@
-package com.lyx.Tree.minimumDepthOfBinaryTree;
+package com.lyx.leetcode.Tree.minimumDepthOfBinaryTree;
 
-import com.lyx.Tree.TreeNode;
+import com.lyx.leetcode.Tree.TreeNode;
 
 /**
  * Created by lyx on 2018/4/28.

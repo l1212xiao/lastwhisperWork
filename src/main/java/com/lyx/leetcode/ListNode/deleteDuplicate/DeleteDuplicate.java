@@ -1,6 +1,6 @@
-package com.lyx.ListNode.deleteDuplicate;
+package com.lyx.leetcode.ListNode.deleteDuplicate;
 
-import com.lyx.ListNode.ListNode;
+import com.lyx.leetcode.ListNode.ListNode;
 
 /**
  * Created by lyx on 2018/9/19

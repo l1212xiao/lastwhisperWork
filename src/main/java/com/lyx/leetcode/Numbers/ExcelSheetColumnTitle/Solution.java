@@ -1,4 +1,4 @@
-package com.lyx.Numbers.ExcelSheetColumnTitle;
+package com.lyx.leetcode.Numbers.ExcelSheetColumnTitle;
 
 import java.util.ArrayList;
 

@@ -1,4 +1,4 @@
-package com.lyx.Thread;
+package com.lyx.leetcode.Thread;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;

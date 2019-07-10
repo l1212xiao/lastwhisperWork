@@ -1,4 +1,4 @@
-package com.lyx.Array.ThreeSumClosest;
+package com.lyx.leetcode.Array.ThreeSumClosest;
 
 import java.util.Arrays;
 

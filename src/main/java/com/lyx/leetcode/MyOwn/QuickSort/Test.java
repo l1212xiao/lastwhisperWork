@@ -1,6 +1,6 @@
-package com.lyx.MyOwn.QuickSort;
+package com.lyx.leetcode.MyOwn.QuickSort;
 
-import com.lyx.MyOwn.BubleSort.BubleSort;
+import com.lyx.leetcode.MyOwn.BubleSort.BubleSort;
 
 import java.util.Arrays;
 

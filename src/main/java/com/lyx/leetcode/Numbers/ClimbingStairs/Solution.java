@@ -1,4 +1,4 @@
-package com.lyx.Numbers.ClimbingStairs;
+package com.lyx.leetcode.Numbers.ClimbingStairs;
 
 /**
  * Created by lyx on 2018/5/14.

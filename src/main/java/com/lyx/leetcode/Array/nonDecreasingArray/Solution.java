@@ -1,4 +1,4 @@
-package com.lyx.Array.nonDecreasingArray;
+package com.lyx.leetcode.Array.nonDecreasingArray;
 
 /**
  * Created by lyx on 2018/8/7.

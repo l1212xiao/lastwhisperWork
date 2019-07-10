@@ -1,6 +1,6 @@
-package com.lyx.Tree.pathSum;
+package com.lyx.leetcode.Tree.pathSum;
 
-import com.lyx.Tree.TreeNode;
+import com.lyx.leetcode.Tree.TreeNode;
 
 
 /**

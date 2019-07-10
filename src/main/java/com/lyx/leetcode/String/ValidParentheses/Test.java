@@ -1,4 +1,4 @@
-package com.lyx.String.ValidParentheses;
+package com.lyx.leetcode.String.ValidParentheses;
 
 /**
  * Created by lyx on 2018/8/15.

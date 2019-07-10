@@ -1,6 +1,6 @@
-package com.lyx.Tree.Traversal;
+package com.lyx.leetcode.Tree.Traversal;
 
-import com.lyx.Tree.TreeNode;
+import com.lyx.leetcode.Tree.TreeNode;
 
 import java.util.Stack;
 

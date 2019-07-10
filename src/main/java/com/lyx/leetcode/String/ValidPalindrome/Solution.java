@@ -1,4 +1,4 @@
-package com.lyx.String.ValidPalindrome;
+package com.lyx.leetcode.String.ValidPalindrome;
 
 /**
  * Created by lyx on 2018/5/10.

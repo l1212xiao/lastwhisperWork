@@ -1,6 +1,6 @@
-package com.lyx.ListNode.addTwoNumbers;
+package com.lyx.leetcode.ListNode.addTwoNumbers;
 
-import com.lyx.ListNode.ListNode;
+import com.lyx.leetcode.ListNode.ListNode;
 
 /**
  * Created by lyx on 2018/5/10.
@@ -12,7 +12,7 @@ public class Test {
         char[] chars = Integer.toString(sum).toCharArray();
         System.out.println(Integer.parseInt(String.valueOf(chars[1])));
 */
-        Solution solution = new Solution();
+        SolutionOrg solution = new SolutionOrg();
 
         ListNode l1 = new ListNode(2);
         ListNode l1a = new ListNode(4);
@@ -31,12 +31,18 @@ public class Test {
 
         //System.out.println(solution.listToSum(l2,0,0));
 
-        System.out.println((9 + 999999991));
+        //System.out.println((9 + 999999991));
 
         while (listNode != null) {
-            System.out.print(listNode.val + " ");
+            if (listNode.next == null) {
+                System.out.print(listNode.val);
+            } else {
+                System.out.print(listNode.val + "->");
+            }
             listNode = listNode.next;
         }
+
+        System.out.println("\n");
 
     }
 }

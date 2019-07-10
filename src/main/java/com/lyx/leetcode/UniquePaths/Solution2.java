@@ -1,4 +1,4 @@
-package com.lyx.Path.UniquePaths;
+package com.lyx.leetcode.UniquePaths;
 
 /**
  * Created by lyx on 2018/7/5.

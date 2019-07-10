@@ -1,6 +1,7 @@
-package com.lyx.ListNode.linkedListCycle;
+package com.lyx.leetcode.ListNode.linkedListCycle;
 
-import com.lyx.ListNode.ListNode;
+
+import com.lyx.leetcode.ListNode.ListNode;
 
 /**
  * Created by lyx on 2018/5/11.

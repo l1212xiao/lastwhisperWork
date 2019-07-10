@@ -1,4 +1,4 @@
-package com.lyx.Numbers.pow;
+package com.lyx.leetcode.Numbers.pow;
 
 /**
  * Created by lyx on 2018/5/14.

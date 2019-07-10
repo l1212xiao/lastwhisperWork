@@ -1,6 +1,8 @@
-package com.lyx.ListNode.linkedListCycle;
+package com.lyx.leetcode.ListNode.linkedListCycle;
 
-import com.lyx.ListNode.ListNode;
+
+
+import com.lyx.leetcode.ListNode.ListNode;
 
 import java.util.ArrayList;
 import java.util.List;

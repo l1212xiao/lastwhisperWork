@@ -1,4 +1,4 @@
-package com.lyx.Triangle.pascalsTriangle2;
+package com.lyx.leetcode.Triangle.pascalsTriangle2;
 
 import java.util.List;
 

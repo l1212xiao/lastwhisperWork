@@ -1,4 +1,4 @@
-package com.lyx.Stack.minStack;
+package com.lyx.leetcode.Stack.minStack;
 
 import java.util.Stack;
 

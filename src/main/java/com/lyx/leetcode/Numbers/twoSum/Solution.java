@@ -1,4 +1,4 @@
-package com.lyx.Numbers.twoSum;
+package com.lyx.leetcode.Numbers.twoSum;
 
 import java.util.HashMap;
 import java.util.Map;

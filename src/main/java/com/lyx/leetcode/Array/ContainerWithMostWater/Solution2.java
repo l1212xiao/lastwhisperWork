@@ -1,4 +1,4 @@
-package com.lyx.Array.ContainerWithMostWater;
+package com.lyx.leetcode.Array.ContainerWithMostWater;
 
 /**
  * Created by lyx on 2018/7/5.

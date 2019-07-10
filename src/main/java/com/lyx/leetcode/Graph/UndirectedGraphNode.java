@@ -1,4 +1,4 @@
-package com.lyx.Graph;
+package com.lyx.leetcode.Graph;
 
 import java.util.ArrayList;
 import java.util.List;

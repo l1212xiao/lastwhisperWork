@@ -1,6 +1,7 @@
-package com.lyx.ListNode.reverseListNode;
+package com.lyx.leetcode.ListNode.reverseListNode;
 
-import com.lyx.ListNode.ListNode;
+
+import com.lyx.leetcode.ListNode.ListNode;
 
 /**
  * Created by lyx on 2018/9/21

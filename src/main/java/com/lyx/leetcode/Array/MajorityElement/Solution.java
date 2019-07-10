@@ -1,4 +1,4 @@
-package com.lyx.Array.MajorityElement;
+package com.lyx.leetcode.Array.MajorityElement;
 
 /**
  * Created by lyx on 2018/5/25.

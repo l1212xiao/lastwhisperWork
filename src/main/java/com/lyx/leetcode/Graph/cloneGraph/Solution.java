@@ -1,6 +1,6 @@
-package com.lyx.Graph.cloneGraph;
+package com.lyx.leetcode.Graph.cloneGraph;
 
-import com.lyx.Graph.UndirectedGraphNode;
+import com.lyx.leetcode.Graph.UndirectedGraphNode;
 
 import java.util.HashMap;
 import java.util.LinkedList;

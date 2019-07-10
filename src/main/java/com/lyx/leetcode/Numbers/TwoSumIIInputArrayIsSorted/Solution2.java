@@ -1,4 +1,4 @@
-package com.lyx.Numbers.TwoSumIIInputArrayIsSorted;
+package com.lyx.leetcode.Numbers.TwoSumIIInputArrayIsSorted;
 
 /**
  * Created by lyx on 2018/5/14.

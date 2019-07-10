@@ -1,4 +1,4 @@
-package com.lyx.ListNode;
+package com.lyx.leetcode.ListNode;
 
 /**
  * Created by lyx on 2018/5/10.

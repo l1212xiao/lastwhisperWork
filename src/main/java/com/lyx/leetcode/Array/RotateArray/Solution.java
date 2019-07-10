@@ -1,4 +1,4 @@
-package com.lyx.Array.RotateArray;
+package com.lyx.leetcode.Array.RotateArray;
 
 /**
  * Created by lyx on 2018/6/5.

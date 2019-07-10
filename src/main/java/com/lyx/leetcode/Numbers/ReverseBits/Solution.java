@@ -1,4 +1,4 @@
-package com.lyx.Numbers.ReverseBits;
+package com.lyx.leetcode.Numbers.ReverseBits;
 
 import java.util.ArrayList;
 import java.util.Collections;

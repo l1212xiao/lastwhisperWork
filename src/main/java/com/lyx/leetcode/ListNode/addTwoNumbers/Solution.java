@@ -1,6 +1,6 @@
-package com.lyx.ListNode.addTwoNumbers;
+package com.lyx.leetcode.ListNode.addTwoNumbers;
 
-import com.lyx.ListNode.ListNode;
+import com.lyx.leetcode.ListNode.ListNode;
 
 /**
  * Created by lyx on 2018/5/10.

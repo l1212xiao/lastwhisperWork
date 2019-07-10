@@ -1,6 +1,6 @@
-package com.lyx.Tree.LowestCommonAncestor;
+package com.lyx.leetcode.Tree.LowestCommonAncestor;
 
-import com.lyx.Tree.TreeNode;
+import com.lyx.leetcode.Tree.TreeNode;
 
 /**
  * Created by lyx on 2018/8/22.

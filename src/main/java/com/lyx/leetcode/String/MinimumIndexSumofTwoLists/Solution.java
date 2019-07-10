@@ -1,4 +1,4 @@
-package com.lyx.String.MinimumIndexSumofTwoLists;
+package com.lyx.leetcode.String.MinimumIndexSumofTwoLists;
 
 import java.util.*;
 

@@ -1,4 +1,4 @@
-package com.lyx.Array.RotateArray;
+package com.lyx.leetcode.Array.RotateArray;
 
 import java.util.ArrayList;
 import java.util.List;

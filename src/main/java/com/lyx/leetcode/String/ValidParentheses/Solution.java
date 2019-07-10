@@ -1,4 +1,4 @@
-package com.lyx.String.ValidParentheses;
+package com.lyx.leetcode.String.ValidParentheses;
 
 import java.util.Stack;
 

@@ -1,4 +1,4 @@
-package com.lyx.Tree;
+package com.lyx.leetcode.Tree;
 
 /**
  * Created by lyx on 2018/4/28.

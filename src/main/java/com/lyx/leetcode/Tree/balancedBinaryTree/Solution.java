@@ -1,6 +1,6 @@
-package com.lyx.Tree.balancedBinaryTree;
+package com.lyx.leetcode.Tree.balancedBinaryTree;
 
-import com.lyx.Tree.TreeNode;
+import com.lyx.leetcode.Tree.TreeNode;
 
 import java.util.LinkedList;
 import java.util.Queue;

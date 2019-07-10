@@ -1,4 +1,4 @@
-package com.lyx.Numbers.Numberof1Bits;
+package com.lyx.leetcode.Numbers.Numberof1Bits;
 
 /**
  * Created by lyx on 2018/6/13.

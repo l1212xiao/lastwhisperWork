@@ -1,6 +1,7 @@
-package com.lyx.ListNode.intersectionOfTwoLinkedLists;
+package com.lyx.leetcode.ListNode.intersectionOfTwoLinkedLists;
 
-import com.lyx.ListNode.ListNode;
+
+import com.lyx.leetcode.ListNode.ListNode;
 
 /**
  * Created by lyx on 2018/5/13.

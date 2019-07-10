@@ -1,4 +1,4 @@
-package com.lyx.String.longestSubstringWithoutRepeatingCharacters;
+package com.lyx.leetcode.String.longestSubstringWithoutRepeatingCharacters;
 
 import java.util.HashMap;
 import java.util.Map;

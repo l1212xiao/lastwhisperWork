@@ -1,6 +1,6 @@
-package com.lyx.Tree.binaryTreeInorderTraversal;
+package com.lyx.leetcode.Tree.binaryTreeInorderTraversal;
 
-import com.lyx.Tree.TreeNode;
+import com.lyx.leetcode.Tree.TreeNode;
 
 import java.util.ArrayList;
 

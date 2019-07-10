@@ -1,4 +1,4 @@
-package com.lyx.Numbers.DecodeWays;
+package com.lyx.leetcode.Numbers.DecodeWays;
 
 /**
  * Created by lyx on 2018/5/14.

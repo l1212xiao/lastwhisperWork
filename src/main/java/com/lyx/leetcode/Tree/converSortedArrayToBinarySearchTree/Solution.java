@@ -1,6 +1,6 @@
-package com.lyx.Tree.converSortedArrayToBinarySearchTree;
+package com.lyx.leetcode.Tree.converSortedArrayToBinarySearchTree;
 
-import com.lyx.Tree.TreeNode;
+import com.lyx.leetcode.Tree.TreeNode;
 
 /**
  * Created by lyx on 2018/4/28.

@@ -1,4 +1,4 @@
-package com.lyx.MyOwn.onlyOnceChar;
+package com.lyx.leetcode.MyOwn.onlyOnceChar;
 
 import java.util.ArrayList;
 

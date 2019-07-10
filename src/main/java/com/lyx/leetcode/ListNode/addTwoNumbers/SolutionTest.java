@@ -1,11 +1,12 @@
-package com.lyx.ListNode.addTwoNumbers;
+package com.lyx.leetcode.ListNode.addTwoNumbers;
 
-import com.lyx.ListNode.ListNode;
+import com.lyx.leetcode.ListNode.ListNode;
 
 /**
  * Created by lyx on 2018/7/6.
  */
 public class SolutionTest {
+
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         return combine(l1, l2, 0);
     }

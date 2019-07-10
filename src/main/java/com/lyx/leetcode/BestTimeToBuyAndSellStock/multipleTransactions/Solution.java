@@ -1,4 +1,4 @@
-package com.lyx.BestTimeToBuyAndSellStock.multipleTransactions;
+package com.lyx.leetcode.BestTimeToBuyAndSellStock.multipleTransactions;
 
 /**
  * Created by lyx on 2018/5/3.

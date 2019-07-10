@@ -1,4 +1,4 @@
-package com.lyx.Stack.creatQueue;
+package com.lyx.leetcode.Stack.creatQueue;
 
 import java.util.Stack;
 

@@ -1,4 +1,4 @@
-package com.lyx.Numbers.FactorialTrailingZeroes;
+package com.lyx.leetcode.Numbers.FactorialTrailingZeroes;
 
 /**
  * Created by lyx on 2018/5/28.

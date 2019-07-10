@@ -1,4 +1,4 @@
-package com.lyx.BestTimeToBuyAndSellStock.common;
+package com.lyx.leetcode.BestTimeToBuyAndSellStock.common;
 
 /**
  * Created by lyx on 2018/5/3.

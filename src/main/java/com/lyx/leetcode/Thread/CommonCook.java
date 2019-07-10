@@ -1,4 +1,4 @@
-package com.lyx.Thread;
+package com.lyx.leetcode.Thread;
 
 /**
  * Created on 2018/12/6

@@ -1,6 +1,6 @@
-package com.lyx.Tree.postorderTraversal;
+package com.lyx.leetcode.Tree.postorderTraversal;
 
-import com.lyx.Tree.TreeNode;
+import com.lyx.leetcode.Tree.TreeNode;
 
 import java.util.ArrayList;
 import java.util.List;

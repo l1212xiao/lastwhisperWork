@@ -1,4 +1,4 @@
-package com.lyx.Numbers.ExcelSheetColumnTitle;
+package com.lyx.leetcode.Numbers.ExcelSheetColumnTitle;
 
 /**
  * Created by lyx on 2018/5/21.

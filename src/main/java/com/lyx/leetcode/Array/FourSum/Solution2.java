@@ -1,4 +1,4 @@
-package com.lyx.Array.FourSum;
+package com.lyx.leetcode.Array.FourSum;
 
 import java.util.ArrayList;
 import java.util.Arrays;

@@ -1,4 +1,4 @@
-package com.lyx.Numbers.TwoSumIIInputArrayIsSorted;
+package com.lyx.leetcode.Numbers.TwoSumIIInputArrayIsSorted;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,6 +1,6 @@
-package com.lyx.Tree.symmetricTree;
+package com.lyx.leetcode.Tree.symmetricTree;
 
-import com.lyx.Tree.TreeNode;
+import com.lyx.leetcode.Tree.TreeNode;
 
 /**
  * Created by lyx on 2018/4/17.

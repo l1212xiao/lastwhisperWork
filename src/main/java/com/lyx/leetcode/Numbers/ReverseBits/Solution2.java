@@ -1,4 +1,4 @@
-package com.lyx.Numbers.ReverseBits;
+package com.lyx.leetcode.Numbers.ReverseBits;
 
 /**
  * Created by lyx on 2018/6/13.

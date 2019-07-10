@@ -1,4 +1,4 @@
-package com.lyx.String.maxSubstring;
+package com.lyx.leetcode.String.maxSubstring;
 
 /**
  * Created by lyx on 2018/4/17.

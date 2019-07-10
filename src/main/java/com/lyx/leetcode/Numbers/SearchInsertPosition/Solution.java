@@ -1,4 +1,4 @@
-package com.lyx.Numbers.SearchInsertPosition;
+package com.lyx.leetcode.Numbers.SearchInsertPosition;
 
 /**
  * Created by lyx on 2018/7/12.
