@@ -1,4 +1,4 @@
-package com.lyx.leetcode.MyOwn.BubleSort;
+package com.lyx.OwnLearning.MyOwn.BubleSort;
 
 /**
  * Created by lyx on 2018/5/15.

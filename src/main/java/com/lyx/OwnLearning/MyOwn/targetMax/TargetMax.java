@@ -1,4 +1,4 @@
-package com.lyx.leetcode.MyOwn.targetMax;
+package com.lyx.OwnLearning.MyOwn.targetMax;
 
 /**
  * Created by lyx on 2018/9/26

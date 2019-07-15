@@ -1,4 +1,4 @@
-package com.lyx.leetcode.MyOwn.wordCountDemo;
+package com.lyx.OwnLearning.MyOwn.wordCountDemo;
 
 /**
  * Created by lyx on 2018/5/15.

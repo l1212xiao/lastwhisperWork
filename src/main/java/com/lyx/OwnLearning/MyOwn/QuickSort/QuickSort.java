@@ -1,4 +1,4 @@
-package com.lyx.leetcode.MyOwn.QuickSort;
+package com.lyx.OwnLearning.MyOwn.QuickSort;
 
 /**
  * Created by lyx on 2018/5/15.
