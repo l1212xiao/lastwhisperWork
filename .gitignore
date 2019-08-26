@@ -1,4 +1,3 @@
-.idea/*
 *.iml
 */target/
 idea
@@ -8,3 +7,4 @@ idea
 script/.idea
 *.gz
 target/
+.idea
