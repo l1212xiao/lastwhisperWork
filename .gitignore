@@ -8,3 +8,4 @@ script/.idea
 *.gz
 target/
 .idea
+.idea/*
