@@ -50,7 +50,10 @@ def transToTemplate(dataFrame):
 
 if __name__ == "__main__":
     # input_path = input("请输入行程单文件地址：")
-    input_path = "/Users/admin/Downloads/滴滴出行行程报销单.pdf"
+    input_base_path = "/Users/admin/Downloads/"
+    # 修改为行程报销单具体文件名字
+    file_name = "滴滴出行行程报销单_lyx_11.pdf"
+    input_path = input_base_path + file_name
     df = extract_itinerary(input_path)
     out_df = transToTemplate(df)
     timeMonth = time.strftime("%Y-%m", time.localtime())
