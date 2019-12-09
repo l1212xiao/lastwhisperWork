@@ -1,4 +1,4 @@
-package com.lyx.lagouLearning;
+package com.lyx.lagouLearning.demo01.String;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

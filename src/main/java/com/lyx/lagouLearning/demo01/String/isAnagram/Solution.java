@@ -1,4 +1,4 @@
-package com.lyx.lagouLearning.demo01.isAnagram;
+package com.lyx.lagouLearning.demo01.String.isAnagram;
 
 import java.util.HashMap;
 import java.util.Map;
