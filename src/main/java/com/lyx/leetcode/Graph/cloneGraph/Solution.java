@@ -11,8 +11,10 @@ import java.util.LinkedList;
  */
 public class Solution {
     public UndirectedGraphNode cloneGraph(UndirectedGraphNode node) {
-        if (node == null) return null;
-        LinkedList<UndirectedGraphNode> queue = new LinkedList<UndirectedGraphNode>();
+        if (node == null) {
+            return null;
+        }
+        LinkedList<UndirectedGraphNode> queue = new LinkedList<>();
         HashMap<UndirectedGraphNode, UndirectedGraphNode> map = new HashMap<>();
 
         UndirectedGraphNode cloneNode = new UndirectedGraphNode(node.label);

@@ -11,7 +11,9 @@ import java.util.Stack;
  */
 public class Solution2 {
     public UndirectedGraphNode cloneGraph(UndirectedGraphNode node) {
-        if (node == null) return null;
+        if (node == null) {
+            return null;
+        }
         Stack<UndirectedGraphNode> stack = new Stack<UndirectedGraphNode>();
         HashMap<UndirectedGraphNode, UndirectedGraphNode> map = new HashMap<UndirectedGraphNode, UndirectedGraphNode>();
 
