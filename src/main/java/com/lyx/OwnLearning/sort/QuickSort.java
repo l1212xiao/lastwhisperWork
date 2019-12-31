@@ -1,5 +1,7 @@
 package com.lyx.OwnLearning.sort;
 
+import java.util.Arrays;
+
 /**
  * Created by lyx on 2018/5/21.
  */
@@ -39,9 +41,11 @@ public class QuickSort {
         int[] arr = {5, 3, 4, 1, 2};
         quickSort(arr, 0, arr.length - 1);
 
-        for (int x : arr) {
-            System.out.print(x+" ");
-        }
+        System.out.println(Arrays.toString(arr));
+
+        // for (int x : arr) {
+        //     System.out.print(x+" ");
+        // }
     }
 
 }
