@@ -17,7 +17,6 @@ import java.util.Arrays;
  */
 public class ConstrucrBTree {
 
-
     public static TreeNode buildTree(int[] preOrders, int[] inOrders) {
 
         if (preOrders.length == 0 || inOrders.length == 0) {
