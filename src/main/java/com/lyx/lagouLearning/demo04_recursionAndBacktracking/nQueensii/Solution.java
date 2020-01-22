@@ -41,7 +41,6 @@ public class Solution {
         }
     }
 
-
     private boolean isValide(int row, int col) {
         return !colSet.contains(col)
                 && !masterSet.contains(row - col)
