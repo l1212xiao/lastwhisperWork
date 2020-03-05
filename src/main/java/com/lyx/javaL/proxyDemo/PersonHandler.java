@@ -16,6 +16,7 @@ public class PersonHandler<T> implements InvocationHandler {
      */
     private T mTarget;
 
+
     public PersonHandler(T target) {
         mTarget = target;
     }
