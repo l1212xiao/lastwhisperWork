@@ -1,7 +1,4 @@
-package com.lyx.lagouLearning.demo3_sort;
-
-import java.util.LinkedList;
-import java.util.Queue;
+package com.lyx.lagouLearning.demo03_sort;
 
 /**
  * @author lvyunxiao

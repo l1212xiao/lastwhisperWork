@@ -1,6 +1,6 @@
-package com.lyx.lagouLearning.demo3_sort;
+package com.lyx.lagouLearning.demo03_sort;
 
-import static com.lyx.lagouLearning.demo3_sort.Swap.swap;
+import static com.lyx.lagouLearning.demo03_sort.Swap.swap;
 
 /**
  * @author lvyunxiao

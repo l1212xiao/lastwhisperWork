@@ -1,4 +1,4 @@
-package com.lyx.lagouLearning.demo3_sort;
+package com.lyx.lagouLearning.demo03_sort;
 
 /**
  * @author lvyunxiao
