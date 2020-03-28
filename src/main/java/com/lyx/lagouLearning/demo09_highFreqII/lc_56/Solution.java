@@ -11,6 +11,8 @@ import java.util.List;
  * @date 2020/3/20
  * 56. 合并区间
  * https://leetcode-cn.com/problems/merge-intervals/
+ * 时间复杂度 O(nlog(n))，因为一开始要对数组进行排序。
+ * 空间复杂度为 O(n)，因为用了一个额外的 result 数组来保存结果。
  */
 public class Solution {
     public int[][] merge(int[][] intervals) {
@@ -28,7 +30,7 @@ public class Solution {
             if (previous == null || current[0] > previous[1]) {
                 result.add(previous = current);
                 // 相当于 result.add(current); previous = current;
-            }else {// 否则，两个区间发生了重叠，更新前一个区间的结束时间
+            } else {// 否则，两个区间发生了重叠，更新前一个区间的结束时间
                 previous[1] = Math.max(previous[1], current[1]);
             }
         }

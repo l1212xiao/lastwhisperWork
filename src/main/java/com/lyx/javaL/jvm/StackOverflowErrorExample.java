@@ -13,4 +13,6 @@ public class StackOverflowErrorExample {
     public static void a() {
         a();
     }
+    // Exception in thread "main" java.lang.StackOverflowError
+    // at com.lyx.javaL.jvm.StackOverflowErrorExample.a(StackOverflowErrorExample.java:14)
 }
