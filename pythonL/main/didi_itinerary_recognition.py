@@ -37,7 +37,7 @@ def transToTemplate(dataFrame):
     if isinstance(dataFrame, pandas.DataFrame):
         templateFields = ['序号', '日期', '开始时间', '出发地点', '到达地点', '事由', '金额', '备注']
         col_map = {'起点': '出发地点', '终点': '到达地点', '金额[元]': '金额'}
-        dataFrame['事由'] = dataFrame['上车时间'].map(lambda x: '周末加班' if x.split()[2] in ['周六', '周日'] else '晚间加班')
+        dataFrame['事由'] = dataFrame['上车时间'].map(lambda x: '周末加班' if x.split()[2] in ['周六', '周日'] else '工作交通费')
         dataFrame['开始时间'] = dataFrame['上车时间'].map(lambda x: x.split()[1])
         dataFrame['日期'] = dataFrame['上车时间'].map(lambda x: x.split()[0])
         dataFrame['序号'] = dataFrame['序号'].astype('int')

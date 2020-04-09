@@ -11,6 +11,8 @@ import java.util.concurrent.RecursiveTask;
  * @classname ForkJoinPoolDemo
  * @description ForkJoinPoolDemo
  * @date 2020/3/30
+ * <p>
+ * 参考：https://segmentfault.com/a/1190000008140126
  */
 public class ForkJoinPoolDemo {
 
