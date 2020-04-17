@@ -1,4 +1,4 @@
-package com.lyx.lagouLearning.domo10_highIII01.lc_10;
+package com.lyx.lagouLearning.domo10_highIII.lc_10;
 
 /**
  * @author lvyunxiao
@@ -6,6 +6,7 @@ package com.lyx.lagouLearning.domo10_highIII01.lc_10;
  * @description Solution
  * @date 2020/4/9
  */
+@Deprecated
 public class Solution {
     public boolean isMatch(String s, String p) {
         if (s == null || p == null) {
