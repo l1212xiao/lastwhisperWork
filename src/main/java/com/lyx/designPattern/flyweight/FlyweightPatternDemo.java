@@ -5,16 +5,16 @@ package com.lyx.designPattern.flyweight;
  * @classname FlyweightPatternDemo
  * @description FlyweightPatternDemo
  * @date 2020/4/30
- *
+ * <p>
  * https://www.runoob.com/design-pattern/flyweight-pattern.html
- *
+ * <p>
  * 享元模式（Flyweight Pattern）主要用于减少创建对象的数量，以减少内存占用和提高性能。这种类型的设计模式属于结构型模式，
  * 它提供了减少对象数量从而改善应用所需的对象结构的方式。
- *
+ * <p>
  * 享元模式尝试重用现有的同类对象，如果未找到匹配的对象，则创建新对象。
  * 我们将通过创建 5 个对象来画出 20 个分布于不同位置的圆来演示这种模式。由于只有 5 种可用的颜色，
  * 所以 color 属性被用来检查现有的 Circle 对象。
- *
+ * <p>
  * 我们将创建一个 Shape 接口和实现了 Shape 接口的实体类 Circle。下一步是定义工厂类 ShapeFactory。
  * ShapeFactory 有一个 Circle 的 HashMap，其中键名为 Circle 对象的颜色。
  * 无论何时接收到请求，都会创建一个特定颜色的圆。ShapeFactory 检查它的 HashMap 中的 circle 对象，
