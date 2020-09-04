@@ -191,6 +191,27 @@ public class traversalTree {
         }
     }
 
+    public static void postOrder2(TreeNode root) {
+        System.out.print("pos-order: ");
+        if (root != null) {
+            Stack<TreeNode> stack = new Stack<>();
+            stack.push(root);
+            TreeNode c;
+            while (!stack.isEmpty()) {
+                c = stack.peek();
+                if (c.left != null && root != c.left && root != c.right) {
+                    stack.push(c.left);
+                } else if (c.right != null && root != c.right) {
+                    stack.push(c.right);
+                } else {
+                    System.out.print(stack.pop().val + " ");
+                    root = c;
+                }
+            }
+        }
+        System.out.println();
+    }
+
     /**
      * 层序遍历（广度优先遍历）
      */

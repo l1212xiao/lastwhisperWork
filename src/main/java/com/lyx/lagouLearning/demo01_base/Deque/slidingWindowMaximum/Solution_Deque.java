@@ -11,7 +11,7 @@ import java.util.ArrayDeque;
 public class Solution_Deque {
 
     ArrayDeque<Integer> deq = new ArrayDeque<Integer>();
-    int [] nums;
+    int[] nums;
 
     public void clean_deque(int i, int k) {
         // remove indexes of elements not from sliding window
@@ -46,11 +46,11 @@ public class Solution_Deque {
                 max_idx = i;
             }
         }
-        int [] output = new int[n - k + 1];
+        int[] output = new int[n - k + 1];
         output[0] = nums[max_idx];
 
         // build output
-        for (int i  = k; i < n; i++) {
+        for (int i = k; i < n; i++) {
             clean_deque(i, k);
             deq.addLast(i);
             output[i - k + 1] = nums[deq.getFirst()];

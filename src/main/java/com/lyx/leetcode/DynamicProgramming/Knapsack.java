@@ -31,18 +31,17 @@ public class Knapsack {
     public static int knapsack(int[] w, int[] v, int c) {
 
         int n = w.length - 1;
-
-        int[][] m = new int[n + 1][c + 1];
-        m[0][n] = 0;
+        int[][] dp = new int[n + 1][c + 1];
+        dp[0][n] = 0;
 
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= c; j++) {
                 if (j >= w[i]) {
-                    m[i][j] = Math.max(m[i - 1][j], m[i - 1][j - w[i]] + v[i]);
+                    dp[i][j] = Math.max(dp[i - 1][j], dp[i - 1][j - w[i]] + v[i]);
                 }
             }
         }
-        return m[n][c];
+        return dp[n][c];
     }
 
 
