@@ -86,4 +86,4 @@ console.log(foo(5));
 
 ## 图片
 > ![name](img_path)
-![01_02](/Users/admin/IdeaProjects/leetcodePro/src/main/java/com/lyx/mashibing/multiThread/img/01_02.jpg)
+![01_02](/Users/admin/IdeaProjects/lastwhisperWork/src/main/java/com/lyx/mashibing/multiThread/img/01_02.jpg)

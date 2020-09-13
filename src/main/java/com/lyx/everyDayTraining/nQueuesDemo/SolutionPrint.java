@@ -91,8 +91,22 @@ public class SolutionPrint {
 
     public static void main(String[] args) {
         SolutionPrint solution = new SolutionPrint();
-        int n = 4;
-        System.out.println(solution.solveNQueens(n));
+        int n = 8;
+        // System.out.println(solution.solveNQueens(n));
+        List<List<String>> lists = solution.solveNQueens(n);
+        printList(lists);
+    }
+
+    public static void printList(List<List<String>> list) {
+        System.out.println("-------------------");
+        System.out.println(list.size());
+        System.out.println("-------------------");
+        for (List<String> stringList : list) {
+            System.out.println("-------------------");
+            for (String s : stringList) {
+                System.out.println(s);
+            }
+        }
     }
 
 }
