@@ -176,7 +176,7 @@ public class traversalTree {
         while (!stack.empty()) {
             cur = stack.pop();
 
-            //一个根节点被访问的前提是：无右子树或右子树已被访问过
+            // 位于左子树，则需要跳过根节点，先进入右子树，再回头访问跟节点
             if (cur.right != null && cur.right != pre) {
                 stack.push(cur);
                 cur = cur.right;
@@ -185,6 +185,7 @@ public class traversalTree {
                     cur = cur.left;
                 }
             } else {
+                //一个根节点被访问的前提是：无右子树或右子树已被访问过
                 System.out.print(cur.val + " ");
                 pre = cur;
             }

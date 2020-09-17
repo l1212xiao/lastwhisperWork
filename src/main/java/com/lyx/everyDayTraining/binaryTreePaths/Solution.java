@@ -68,7 +68,4 @@ public class Solution {
             constructpath(root.right, sPath.toString(), paths);
         }
     }
-
-
-
 }
