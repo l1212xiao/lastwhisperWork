@@ -43,6 +43,7 @@ public class Solution2 {
                 stack.push(root);
                 root = root.left;
             } else {
+                // 查看栈顶的元素，如果该元素右孩子非空切未被访问，将该右孩子赋给遍历元素，否则出栈访问，并将该元素赋给pre元素
                 TreeNode cur = stack.peek();
                 if (cur.right != null && cur.right != pre) {
                     root = cur.right;

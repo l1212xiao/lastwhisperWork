@@ -1,5 +1,6 @@
-package com.lyx.lagouLearning.demo01_base.Tree;
+package com.lyx.OwnLearning;
 
+import com.lyx.leetcode.Tree.TreeNode;
 import org.junit.Test;
 
 import java.util.ArrayDeque;
@@ -14,7 +15,7 @@ import java.util.Stack;
  * @description traversalTree
  * @date 2019/12/7
  */
-public class traversalTree {
+public class TraversalTree {
 
     /**
      * 构造二叉树
@@ -213,6 +214,32 @@ public class traversalTree {
         System.out.println();
     }
 
+    public List<Integer> postOrder3(TreeNode root) {
+        List<Integer> ans = new ArrayList<>();
+        if (root == null) {
+            return ans;
+        }
+        Stack<TreeNode> stack = new Stack<>();
+        TreeNode pre = null;
+        while (!stack.isEmpty() || root != null) {
+            if (root != null) {
+                stack.push(root);
+                root = root.left;
+            } else {
+                // 查看栈顶的元素，如果该元素右孩子非空切未被访问，将该右孩子赋给遍历元素，否则出栈访问，并将该元素赋给pre元素
+                TreeNode cur = stack.peek();
+                if (cur.right != null && cur.right != pre) {
+                    root = cur.right;
+                } else {
+                    stack.pop();
+                    ans.add(cur.val);
+                    pre = cur;
+                }
+            }
+        }
+        return ans;
+    }
+
     /**
      * 层序遍历（广度优先遍历）
      */
@@ -300,22 +327,22 @@ public class traversalTree {
      */
     @Test
     public void testTraversal() {
-       TreeNode node1 = new TreeNode(1);
-       TreeNode node2 = new TreeNode(2);
-       TreeNode node3 = new TreeNode(3);
-       TreeNode node4 = new TreeNode(4);
-       TreeNode node5 = new TreeNode(5);
-       TreeNode node6 = new TreeNode(6);
-       TreeNode node7 = new TreeNode(7);
+        TreeNode node1 = new TreeNode(1);
+        TreeNode node2 = new TreeNode(2);
+        TreeNode node3 = new TreeNode(3);
+        TreeNode node4 = new TreeNode(4);
+        TreeNode node5 = new TreeNode(5);
+        TreeNode node6 = new TreeNode(6);
+        TreeNode node7 = new TreeNode(7);
 
-       node1.left = node2;
-       node1.right = node3;
+        node1.left = node2;
+        node1.right = node3;
 
-       node2.left = node4;
-       node2.right = node5;
+        node2.left = node4;
+        node2.right = node5;
 
-       node3.left = node6;
-       node3.right = node7;
+        node3.left = node6;
+        node3.right = node7;
 
         // TreeNode node1 = new TreeNode(3);
         // TreeNode node2 = new TreeNode(1);
