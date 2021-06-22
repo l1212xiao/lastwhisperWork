@@ -19,22 +19,23 @@ package com.lyx.interview.baShuZiFanYiChengZiFuChuanLcof;
  * @create 2020-10-12 23:03
  */
 public class Solution {
+
     public int translateNum(int num) {
         char[] s = String.valueOf(num).toCharArray();
         int n = s.length;
         int[] dp = new int[n];
         dp[0] = 1;
-        for(int i = 1;i < n; i++) {
-            if(s[i-1] == '1' || (s[i-1] == '2' && s[i] - '0' <= 5)){
-                if(i > 1) {
-                    dp[i] = dp[i-1] + dp[i - 2];
-                }else {
-                    dp[i] = dp[i-1] + 1;
+        for (int i = 1; i < n; i++) {
+            if (s[i - 1] == '1' || (s[i - 1] == '2' && s[i] - '0' <= 5)) {
+                if (i > 1) {
+                    dp[i] = dp[i - 1] + dp[i - 2];
+                } else {
+                    dp[i] = dp[i - 1] + 1;
                 }
-            }else {
-                dp[i] = dp[i-1];
+            } else {
+                dp[i] = dp[i - 1];
             }
         }
-        return dp[n-1];
+        return dp[n - 1];
     }
 }
