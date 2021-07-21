@@ -35,13 +35,13 @@ public class Solution {
             return null;
         }
 
-        // 定义一个最小堆来保存 k 个链表节点；将 k 个链表的头放入到最小堆里。
+        //定义一个最小堆来保存k个链表节点；将k个链表的头放入到最小堆里。
         PriorityQueue<ListNode> heap = new PriorityQueue<>(k, (o1, o2) -> o1.val - o2.val);
 
         // 将所给链表插入到最小堆中
-        for (int i = 0; i < k; i++) {
-            if (lists[i] != null) {
-                heap.offer(lists[i]);
+        for (ListNode list : lists) {
+            if (list != null) {
+                heap.offer(list);
             }
         }
 
@@ -49,7 +49,7 @@ public class Solution {
             ListNode node = heap.poll();
             p.next = node;
             p = p.next;
-            // 如果发现该节点后面还有后续节点，将后续节点加入到最小堆里。 
+            //如果发现该节点后面还有后续节点，将后续节点加入到最小堆里。
             if (node.next != null) {
                 heap.offer(node.next);
             }

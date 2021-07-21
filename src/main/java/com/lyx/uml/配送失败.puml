@@ -1,0 +1,36 @@
+@startuml
+title 配送失败
+
+participant TMS as TMS
+participant 处理结束 as 处理结束
+participant Document as Document
+participant GMS as GMS
+queue MQTms2Document as MQTms2Document
+
+       TMS -> MQTms2Document:司机配送失败
+       MQTms2Document --> Document
+       Document -> Document:ReverseTmsDelveFailureConsumer
+       Document -> Document :参数校验
+       alt 校验是否通过
+           group 通过
+           Document -> Document: return
+           end
+       else
+          group 不通过
+          Document ->o  处理结束
+          end
+      end
+      Document ->Document:如果为待确认状态
+      Document -> Document:防重校验
+      Document -> DB:修改调拨单状态为配送失败
+      DB -->Document :return
+      Document -> Document:忽略-逆向流程
+      Document -> GMS :创建逆向入库单
+      alt 未发生异常
+         GMS --> Document:return
+      else 发生异常
+        Document ->x 重试:进入重试表
+       end
+     Document ->o 处理结束: 处理完成
+
+@enduml

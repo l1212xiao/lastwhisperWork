@@ -1,0 +1,47 @@
+@startuml
+title 履约Push
+
+participant TMS as TMS
+participant 处理结束 as 处理结束
+participant Document as Document
+participant Query as Query
+participant 交易侧 as 交易侧
+control 重试 as 重试
+queue MQTms2Document as MQTms2Document
+queue MQDocument2jiaoyi as MQDocument2jiaoyi
+
+       TMS -> MQTms2Document:履约Push
+       MQTms2Document --> Document
+       Document -> Document:TmsDriverDispatchConsumer
+       Document -> Document :check 参数校验
+       alt 校验是否通过
+           group 通过
+           Document -> Document: return
+           end
+       else
+          group 不通过
+          Document ->o  处理结束
+          end
+      end
+      loop [n次]
+        Document -> Document :过滤不是网到团的事件
+        Document -> Query :根据poi 和时间段查询发运量
+        Query --> Document:return
+        Document -> Document : 判断发运量是否大于0
+        alt 大于0
+            Document -> Document:加入待发送列表
+         else 小于0
+            Document -> Document:过滤
+         end
+      end
+     group 通知交易侧
+         Document -> MQDocument2jiaoyi: 通知交易侧
+         alt 未发生异常
+         MQDocument2jiaoyi --> 交易侧
+         else 发生异常
+         Document ->x 重试:进入重试表
+         end
+         end
+     Document ->o 处理结束: 处理完成
+
+@enduml

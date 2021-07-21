@@ -5,7 +5,7 @@ package com.lyx.zuo.trainingcamp002.class05;
  * 
  * AVL tree implementation.
  * 
- * In computer science, an AVL tree is a self-balancing binary search tree, and
+ * In computer science, an AVL tree is a self-balancing binary bsearch tree, and
  * it was the first such data structure to be invented.[1] In an AVL tree, the
  * heights of the two child subtrees of any node differ by at most one. Lookup,
  * insertion, and deletion all take O(log n) time in both the average and worst

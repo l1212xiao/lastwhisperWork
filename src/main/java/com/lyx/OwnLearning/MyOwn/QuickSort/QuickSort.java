@@ -13,14 +13,14 @@ public class QuickSort {
 
     public static int partition(int[] arr, int start, int end) {
         assert (arr != null);
-        int pivote = arr[start];
+        int pivot = arr[start];
 
         while (start < end) {
-            while (pivote < arr[end] && start < end) {
+            while (pivot < arr[end] && start < end) {
                 end--;
             }
             swap(arr, start, end);
-            while (pivote > arr[start] && start < end) {
+            while (pivot > arr[start] && start < end) {
                 start++;
             }
             swap(arr, start, end);

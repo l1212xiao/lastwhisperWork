@@ -1,0 +1,56 @@
+@startuml
+title 网格站出库
+
+participant GMS as GMS
+
+participant 处理结束 as 处理结束
+participant Document as Document
+participant 团长端 as 团长端
+control 死信 as 死信
+control 重试 as 重试
+database DB as DB
+queue MQGmsOutStore as MQGmsOutStore
+
+       GMS -> MQGmsOutStore:调拨单网格站出库
+       MQGmsOutStore --> Document
+       Document -> Document:AllocationGmsOutStoreCallbackConsumer
+      Document -> Document :checkGmsOutStore 参数校验
+      alt 校验是否通过
+           group 通过
+           Document -> Document: return
+           end
+      else
+          group 不通过
+          Document -> Document: throw ParamException
+          Document ->o  处理结束
+          end
+      end
+     Document -> Document:过滤老的仓网调拨单
+     group DB部分
+         Document -> DB:查询调拨单
+         DB --> Document:return
+         Document ->x 死信 :数量不一致throw BizException
+         Document -> Document ++: 处理流水handleRecordVos
+         Document -> Document ++: 批量构造convertRecordPo
+         Document -> Document : 单条构造buildAllocationFulfillmentInOutRecordPo
+         Document --> Document --: convertRecordPo return
+
+         Document -> Document :忽略-网格站出库不需要计算调拨单状态
+         Document -> DB : allocationFulfillmentRepository.saveRecordAndUpdateStatus 保存流水
+         DB --> Document:return
+         Document --> Document --:handleRecordVos return
+     end
+         Document --> Document :忽略-mq自产自销 拦截清单计算(网到团出库不需要发送)
+         Document --> Document :忽略-网到团出库不需要通知库存中心
+         group 通知团长端
+         Document -> 团长端: 通知团长端网格站出库数量
+         alt 未发生异常
+
+         团长端 --> Document:return
+         else 发生异常
+         Document -> 重试:进入重试表
+         end
+         end
+     Document ->o 处理结束: 处理完成
+
+@enduml

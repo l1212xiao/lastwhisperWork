@@ -1,0 +1,97 @@
+@startuml
+title RDC出库
+
+participant WDC as WDC
+participant Event as Event
+
+participant 处理结束 as 处理结束
+participant Document as Document
+
+participant 库存中心 as 库存中心
+participant 交易侧 as 交易侧
+participant Query as Query
+control 死信 as 死信
+control 重试 as 重试
+database DB as DB
+queue MQWdcOutStore as MQWdcOutStore
+queue MQEvent2Docuemnt as MQEvent2Docuemnt
+queue MQDocument2Stock as MQDocument2Stock
+queue MQDocument2jiaoyi as MQDocument2jiaoyi
+
+loop n次
+       WDC -> MQWdcOutStore:调拨单发运
+       MQWdcOutStore --> Event
+       Event -> MQEvent2Docuemnt :转发仓出库消息,按照单号路由
+
+       alt  开关控制
+         group 处理wdc消息
+              MQWdcOutStore --> Document
+              Document -> Document:AllocationWdcOutStoreCallbackConsumer
+         end
+       else
+         group 处理Event消息
+             MQEvent2Docuemnt --> Document
+             Document -> Document:EventAllocationWdcOutStoreCallbackConsumer
+         end
+       end
+      Document -> Document :checkWdcOutStore 参数校验
+      alt 校验是否通过
+           group 通过
+           Document -> Document: return
+           end
+      else
+          group 不通过
+          Document -> Document: throw ParamException
+          Document ->o  处理结束
+          end
+      end
+      group 履约push (对模块外不会抛出异常)
+      alt 是否发生异常
+      group 无异常
+         Document -> Document:类型判断,只处理仓到网
+         alt 是否为DBN单据
+         Document -> Query:根据调拨单号查询订单(queryServiceGateway.queryOrderIdsByAllocationNos)
+         Query --> Document:return
+         Document -> Document:判断是否为空
+         else 老仓网逻辑忽略
+         end
+         Document-> MQDocument2jiaoyi:发送履约push
+         MQDocument2jiaoyi --> 交易侧
+      end
+      else 发生异常
+         group 进入重试表重试
+         Document ->x 重试
+         end
+      end
+      end
+     Document -> Document:过滤老的仓网调拨单
+     group DB部分
+         Document -> DB:查询调拨单
+         DB --> Document:return
+         Document ->x 死信 :数量不一致throw BizException
+         Document -> Document ++: 处理流水handleRecordVos
+         Document -> Document ++: 批量构造convertRecordPo
+         Document -> Document : 单条构造buildAllocationFulfillmentInOutRecordPo
+         Document --> Document --: convertRecordPo return
+         Document -> Document ++:计算更新的调拨单状态buildUpdateParamForSameCallBack
+         Document -> Document :过滤掉网为操作方的事件变更
+         Document -> Document :通过状态机计算每个调拨单的目标状态
+         Document -> Document :按照(old-new）分组便于批量处理
+         Document --> Document --:buildUpdateParamForSameCallBack return
+         Document -> Document --:忽略-针对收货时仓网差异分配不匹配场景的兼容
+         Document -> Document:过滤掉已经配送失败的单据的流水和调拨单
+         Document -> DB : allocationFulfillmentRepository.saveRecordAndUpdateStatus 保存
+         DB --> Document:return
+         Document --> Document --:handleRecordVos return
+     end
+         Document --> Document :mq自产自销 拦截清单计算(现在已经无拦截清单,空消费)
+     alt 同步库存中心是否异常
+          Document -> MQDocument2Stock: 同步库存中心
+      else
+          Document ->x 重试:进入重试表
+      end
+          MQDocument2Stock --> 库存中心
+     Document -> Document :判断是否需要通知团长侧,仓网出库不需要
+     Document ->o 处理结束: 处理完成
+end
+@enduml

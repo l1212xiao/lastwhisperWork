@@ -3,10 +3,10 @@ package com.lyx.zuo.trainingcamp002.class05;
 /**
  * Not implemented by zuochengyun
  * 
- * Abstract binary search tree implementation. Its basically fully implemented
- * binary search tree, just template method is provided for creating Node (other
+ * Abstract binary bsearch tree implementation. Its basically fully implemented
+ * binary bsearch tree, just template method is provided for creating Node (other
  * trees can have slightly different nodes with more info). This way some code
- * from standart binary search tree can be reused for other kinds of binary
+ * from standart binary bsearch tree can be reused for other kinds of binary
  * trees.
  * 
  * @author Ignas Lelys

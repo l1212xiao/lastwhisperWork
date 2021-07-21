@@ -3,7 +3,7 @@ package com.lyx.zuo.trainingcamp002.class05;
 /**
  * Not implemented by zuochengyun
  * 
- * Abstract class for self balancing binary search trees. Contains some methods
+ * Abstract class for self balancing binary bsearch trees. Contains some methods
  * that is used for self balancing trees.
  * 
  * @author Ignas Lelys

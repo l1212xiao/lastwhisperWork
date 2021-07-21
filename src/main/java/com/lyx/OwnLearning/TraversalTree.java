@@ -1,13 +1,11 @@
 package com.lyx.OwnLearning;
 
-import com.lyx.leetcode.Tree.TreeNode;
-import org.junit.Test;
-
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Queue;
 import java.util.Stack;
+import org.junit.Test;
 
 /**
  * @author lvyunxiao
@@ -99,7 +97,7 @@ public class TraversalTree {
         while (!stack.isEmpty()) {
             TreeNode node = stack.pop();
             System.out.print(node.val);
-            //右结点先入栈，左结点后入栈
+            // 右结点先入栈，左结点后入栈
             if (node.right != null) {
                 stack.push(node.right);
             }
@@ -122,11 +120,11 @@ public class TraversalTree {
 
     /**
      * 中序遍历，非递归实现
-     *  1. 首先从根节点出发一路向左，入栈所有的左节点；
-     *  2. 出栈一个节点，输出该节点val值，查询该节点是否存在右节点，
-     *     若存在则从该右节点出发一路向左入栈该右节点所在子树所有的左节点；
-     *  3. 若不存在右节点，则出栈下一个节点，输出节点val值，同步骤2操作；
-     *  4. 直到节点为null，且栈为空。
+     *  1. 首先从根节点出发一路向左，入栈所有的左节点；
+     *  2. 出栈一个节点，输出该节点val值，查询该节点是否存在右节点，
+     *     若存在则从该右节点出发一路向左入栈该右节点所在子树所有的左节点；
+     *  3. 若不存在右节点，则出栈下一个节点，输出节点val值，同步骤2操作；
+     *  4. 直到节点为null，且栈为空。
      */
     public void inOrder1(TreeNode root) {
         Stack<TreeNode> stack = new Stack<>();
@@ -156,9 +154,9 @@ public class TraversalTree {
 
     /**
      * 后序遍历，非递归实现
-     *  后序遍历的难点在于：需要判断上次访问的节点是位于左子树，还是右子树
-     *  若是位于左子树，则需要跳过根节点，先进入右子树，再回头访问跟节点
-     *  若是位于右子树，则直接访问根节点
+     *  后序遍历的难点在于：需要判断上次访问的节点是位于左子树，还是右子树
+     *   若是位于左子树，则需要跳过根节点，先进入右子树，再回头访问跟节点
+     *   若是位于右子树，则直接访问根节点
      */
     public static void postOrder1(TreeNode root) {
         if (root == null) {
@@ -186,7 +184,7 @@ public class TraversalTree {
                     cur = cur.left;
                 }
             } else {
-                //一个根节点被访问的前提是：无右子树或右子树已被访问过
+                // 一个根节点被访问的前提是：无右子树或右子树已被访问过
                 System.out.print(cur.val + " ");
                 pre = cur;
             }

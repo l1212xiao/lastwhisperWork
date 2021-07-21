@@ -1,0 +1,61 @@
+@startuml
+title 排线
+
+participant TMS as TMS
+participant GMS as GMS
+participant 处理结束 as 处理结束
+participant Document as Document
+participant 团长端 as 团长端
+control 重试 as 重试
+database DB as DB
+database ES as ES
+queue MQTms2Gms as MQTms2Gms
+queue MQGms2Document as MQGms2Document
+
+
+       TMS -> MQTms2Gms:调拨单排线完成
+       MQTms2Gms --> GMS
+       GMS -> MQGms2Document :调拨单排线消息,团维度回调
+       MQGms2Document --> Document
+       Document -> Document:GmsInStoreApplyConsumer
+       Document -> Document :checkInStoreParams 参数校验
+       alt 校验是否通过
+           group 通过
+           Document -> Document: return
+           end
+       else
+          group 不通过
+          Document -> Document: throw ParamException
+          Document ->o  处理结束
+          end
+       end
+       group DB部分
+          Document -> DB:插入幂等表
+          DB --> Document:return
+          alt 是否幂等
+            group 幂等
+            Document ->o 处理结束
+            end
+          else
+            group 未幂等
+            Document -> DB:插入 instoreApply (这个环节考虑是否保留)
+            DB --> Document:return
+            end
+          end
+       end
+       group 通知团长端
+         group 可以省略
+            Document -> ES:查询对应拦截单数量
+            DB --> Document:return
+            Document -> Document:计算拦截后的计划量
+            Document -> Document:将拦截后计划量为0的调拨单置为关闭
+         end
+         Document -> 团长端:使用拦截后的计划量通知团长端
+         alt 是否发生异常
+            团长端 --> Document:return
+            else
+            Document ->x 重试 :重试表重试
+         end
+       end
+       Document ->o 处理结束
+@enduml
