@@ -5,7 +5,7 @@ import java.util.PriorityQueue;
 /**
  * @author lvyunxiao
  * @date 2021/7/6
- * @description
+ * @description for list node
  */
 public class ListNodeDemo {
 

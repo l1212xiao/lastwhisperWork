@@ -8,7 +8,9 @@ import java.util.Arrays;
 public class QuickSort {
 
     public static void quickSort(int[] arr, int start, int end) {
-        if (arr == null) return;
+        if (arr == null) {
+            return;
+        }
         if (start < end) {
             int mid = partition(arr, start, end);
             quickSort(arr, start, mid - 1);
@@ -25,11 +27,11 @@ public class QuickSort {
     public static int partition(int[] arr, int start, int end) {
         int pivot = arr[start];
         while (start < end) {
-            while (start < end && pivot < arr[end]) {
+            while (start < end && pivot <= arr[end]) {
                 end--;
             }
             swap(arr, start, end);
-            while (start < end && pivot > arr[start]) {
+            while (start < end && pivot >= arr[start]) {
                 start++;
             }
             swap(arr, start, end);
@@ -38,7 +40,8 @@ public class QuickSort {
     }
 
     public static void main(String[] args) {
-        int[] arr = {5, 3, 4, 1, 2};
+        // int[] arr = {5, 3, 4, 1, 2};
+        int[] arr = {10, 7, 2, 4, 7, 62, 3, 4, 2, 1, 8, 9, 19};
         quickSort(arr, 0, arr.length - 1);
 
         System.out.println(Arrays.toString(arr));

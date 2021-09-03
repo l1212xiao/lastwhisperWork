@@ -174,11 +174,11 @@ public class SortDemo {
     public static int partition(int[] arr, int start, int end) {
         int pivot = arr[start];
         while (start < end) {
-            while (start < end && pivot < arr[end]) {
+            while (start < end && pivot <= arr[end]) {
                 end--;
             }
             swap(arr, start, end);
-            while (start < end && pivot > arr[start]) {
+            while (start < end && pivot >= arr[start]) {
                 start++;
             }
             swap(arr, start, end);

@@ -52,7 +52,7 @@ public class RepeatNumDemo {
     }
 
     public static void main(String[] args) {
-        long time = new Date().getTime();
+        long time = System.currentTimeMillis();
         int[] arr = new int[1_0000_0000];//1亿长度
         for (int i = 0; i < arr.length; i++) {
             arr[i] = i + 1;
@@ -62,7 +62,7 @@ public class RepeatNumDemo {
         int repeatNum = getRepeatNum2(arr);
         System.out.println(repeatNum);
 
-        long time2 = new Date().getTime();
+        long time2 = System.currentTimeMillis();
         System.out.println("millisecond:" + (time2 - time));
     }
 

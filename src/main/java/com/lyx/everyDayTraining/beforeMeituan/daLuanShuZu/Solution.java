@@ -16,8 +16,8 @@ public class Solution {
     Random random = new Random();
 
     private int randRange(int min, int max) {
-        // return random.nextInt(max - min) + min;
-        return (int) (Math.random() * (max - min)) + min;
+        return random.nextInt(max - min) + min;
+        // return (int) (Math.random() * (max - min)) + min;
     }
 
     private void swapAt(int i, int j) {
