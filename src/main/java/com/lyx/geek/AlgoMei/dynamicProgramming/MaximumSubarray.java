@@ -40,6 +40,9 @@ package com.lyx.geek.AlgoMei.dynamicProgramming;
  */
 public class MaximumSubarray {
 
+    /*
+    [LC.53]. 最大子序和
+     */
     public int maxSubArray(int[] nums) {
         int length = nums.length;
         if (length == 0) {
