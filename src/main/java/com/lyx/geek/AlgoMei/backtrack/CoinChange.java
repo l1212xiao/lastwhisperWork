@@ -30,6 +30,8 @@ package com.lyx.geek.AlgoMei.backtrack;
  */
 
 
+import java.util.Arrays;
+
 /**
  * @author lvyunxiao
  * @date 2021/8/10
@@ -37,35 +39,58 @@ package com.lyx.geek.AlgoMei.backtrack;
  */
 public class CoinChange {
 
+
+    /*
+    https://leetcode-cn.com/problems/coin-change/solution/322-ling-qian-dui-huan-by-leetcode-solution/
+     */
+    // 方法一：记忆化搜索
     public int coinChange(int[] coins, int amount) {
         if (amount < 1) {
             return 0;
         }
-        return coinChange(coins, amount, new int[amount]);
+        // rem[i] 表示组成金额i所需的最少硬币数
+        int[] mem = new int[amount + 1];
+        return coinChange(coins, amount, mem);
     }
 
-    private int coinChange(int[] coins, int rem, int[] count) {
+    private int coinChange(int[] coins, int rem, int[] men) {
         if (rem < 0) {
             return -1;
         }
         if (rem == 0) {
             return 0;
         }
-        if (count[rem - 1] != 0) {
-            return count[rem - 1];
+        if (men[rem] != 0) {
+            return men[rem];
         }
         int min = Integer.MAX_VALUE;
         for (int coin : coins) {
-            int res = coinChange(coins, rem - coin, count);
+            int res = coinChange(coins, rem - coin, men);
             if (res >= 0 && res < min) {
                 min = 1 + res;
             }
         }
-        count[rem - 1] = (min == Integer.MAX_VALUE) ? -1 : min;
-        return count[rem - 1];
+        men[rem] = (min == Integer.MAX_VALUE) ? -1 : min;
+        return men[rem];
     }
 
-
+    // 方法二：动态规划
+    public int coinChangeDp(int[] coins, int amount) {
+        // 最大数量不超过总面值+1
+        int maxVal = amount + 1;
+        // dp[i] 表示凑成面值i所需的最小硬币数
+        int[] dp = new int[amount + 1];
+        Arrays.fill(dp, maxVal);
+        dp[0] = 0;
+        for (int i = 1; i < amount + 1; i++) {
+            for (int coin : coins) {
+                if (coin <= i) {
+                    dp[i] = Math.min(dp[i], dp[i - coin] + 1);
+                }
+            }
+        }
+        return dp[amount] > amount ? -1 : dp[amount];
+    }
 
 
 }
