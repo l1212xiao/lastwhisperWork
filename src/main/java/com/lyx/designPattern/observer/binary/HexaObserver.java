@@ -1,4 +1,4 @@
-package com.lyx.designPattern.observer;
+package com.lyx.designPattern.observer.binary;
 
 /**
  * @author lvyunxiao

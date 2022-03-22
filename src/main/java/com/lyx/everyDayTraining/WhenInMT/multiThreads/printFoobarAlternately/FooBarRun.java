@@ -56,9 +56,12 @@ import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CyclicBarrier;
 import java.util.concurrent.LinkedBlockingQueue;
+import java.util.concurrent.LinkedTransferQueue;
 import java.util.concurrent.Semaphore;
+import java.util.concurrent.TransferQueue;
 import java.util.concurrent.locks.LockSupport;
 import java.util.concurrent.locks.ReentrantLock;
+import sun.awt.image.ImageWatched.Link;
 
 /**
  * @author lvyunxiao
@@ -67,7 +70,14 @@ import java.util.concurrent.locks.ReentrantLock;
  */
 public class FooBarRun {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
+
+        // TransferQueue<Character> transferQueue = new LinkedTransferQueue<>();
+        //
+        // transferQueue.take();
+        // transferQueue.transfer();
+
+
         FooBar6 fooBar = new FooBar6(10);//打印10次foo bar
         Runnable printFoo = () -> System.out.println("foo");
         Runnable printBar = () -> System.out.println("bar");

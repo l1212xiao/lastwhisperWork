@@ -92,7 +92,12 @@
             <version>1.7.30</version>
         </dependency>
 
-
+        <!--easyexcel文件解析-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>easyexcel</artifactId>
+            <version>2.2.7</version>
+        </dependency>
 
 
     </dependencies>

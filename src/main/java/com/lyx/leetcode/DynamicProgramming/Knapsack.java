@@ -29,8 +29,8 @@ package com.lyx.leetcode.DynamicProgramming;
 public class Knapsack {
 
     public static int knapsack(int[] w, int[] v, int c) {
-
         int n = w.length - 1;
+        // dp[i][j]表示在面对第i件物品，且背包容量为j时所能获得的最大价值
         int[][] dp = new int[n + 1][c + 1];
         dp[0][n] = 0;
 
@@ -48,8 +48,8 @@ public class Knapsack {
     public static void main(String[] args) {
         int[] weight = {2, 3, 4, 5};
         int[] value = {3, 4, 5, 7};
-        int maxweight = 9;
-        System.out.println(knapsack(weight, value, maxweight));
+        int maxWeight = 9;
+        System.out.println(knapsack(weight, value, maxWeight));
     }
 
 }

@@ -58,9 +58,12 @@ public class Solution {
         return max;
     }
 
+    /*
+    [LC.3]无重复字符的最长子串
+     */
     public int lengthOfLongestSubstrings(String s) {
         //定义一个哈希表用来记录上一次某个字符出现的位置，并初始化结果max为0
-        HashMap<Character, Integer> map = new HashMap();
+        HashMap<Character, Integer> map = new HashMap<>();
         int max = 0;
         // 用快慢指针 i 和 j 扫描一遍字符串，若快指针所对应的字符已经出现过，则慢指针跳跃
         for (int i = 0, j = 0; j < s.length(); j++) {

@@ -31,6 +31,9 @@ import java.util.Arrays;
  */
 public class LongestIncreasingSubsequence {
 
+    /**
+     * [LC.300]最长递增子序列
+     */
     public int lengthOfLIS(int[] nums) {
         int len = nums.length;
         // dp[i]表示考虑前i个元素，以第i个结尾的最长上升子序列的长度，nums[i]必须选取
