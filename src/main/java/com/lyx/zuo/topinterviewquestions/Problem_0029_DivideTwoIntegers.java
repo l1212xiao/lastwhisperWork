@@ -77,6 +77,8 @@ public class Problem_0029_DivideTwoIntegers {
 
 	public static void main(String[] args) {
 		int num = -1;
+		// int num = 4;
+		// int num = Integer.MIN_VALUE;
 		System.out.println(printNumBinary(num));
 	}
 

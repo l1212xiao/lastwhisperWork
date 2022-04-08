@@ -17,4 +17,16 @@ public class ListNode {
         this.val = val;
         this.next = next;
     }
+
+    public static String printListNode(ListNode node) {
+        StringBuilder sb = new StringBuilder();
+        ListNode cur = node;
+        while (cur != null) {
+            sb.append(cur.val);
+            sb.append("->");
+            cur = cur.next;
+        }
+        return sb.toString();
+    }
+
 }

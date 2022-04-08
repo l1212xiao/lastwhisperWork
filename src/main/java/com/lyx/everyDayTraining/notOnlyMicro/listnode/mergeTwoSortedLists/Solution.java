@@ -64,6 +64,7 @@ public class Solution {
                 cur.next = list2;
                 list2 = list2.next;
             }
+            cur = cur.next;
         }
         cur.next = list1 == null ? list2 : list1;
         return dummy.next;
