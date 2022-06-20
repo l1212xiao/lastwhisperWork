@@ -1,0 +1,16 @@
+@startuml
+autoactivate on
+title 查询活跃供应商
+actor 调用方 as invoker
+participant ActiveSupplierTService.queryActiveSupplierIds as TService
+participant activeSupplierService.queryActiveSupplierIds as Service
+database DB_allocation_active_supplier as DB
+
+invoker -> TService : ActiveSupplierTRequest
+TService -> Service
+Service -> DB : 传入ActiveSupplierQueryParam
+return 活跃供应商SupplierIds
+return
+return ActiveSupplierTResponse
+
+@enduml

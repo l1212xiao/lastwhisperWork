@@ -21,6 +21,20 @@ import java.util.Arrays;
  * @create 2020-10-11 19:24
  */
 public class Solution {
+
+    // 排序 + 回溯
+    public boolean canPartitionKSubsets(int[] nums, int k) {
+        int sum = Arrays.stream(nums).sum();
+        if (sum % k > 0) return false;
+        int target = sum / k;
+
+        Arrays.sort(nums);
+        int row = nums.length - 1;
+        if (nums[row] > target) return false;
+        return search(new int[k], row, nums, target);
+    }
+
+
     public boolean search(int[] groups, int row, int[] nums, int target) {
         if (row < 0) return true;
         int v = nums[row--];
@@ -33,21 +47,6 @@ public class Solution {
             if (groups[i] == 0) break;
         }
         return false;
-    }
-
-    public boolean canPartitionKSubsets(int[] nums, int k) {
-        int sum = Arrays.stream(nums).sum();
-        if (sum % k > 0) return false;
-        int target = sum / k;
-
-        Arrays.sort(nums);
-        int row = nums.length - 1;
-        if (nums[row] > target) return false;
-        // while (row >= 0 && nums[row] == target) {
-        //     row--;
-        //     k--;
-        // }
-        return search(new int[k], row, nums, target);
     }
 
     // 作者：LeetCode

@@ -9,53 +9,42 @@ import java.util.List;
  * 15. 3Sum
  */
 public class Solution {
+    // 排序 + 双指针解法
     public List<List<Integer>> threeSum(int[] nums) {
-        List<List<Integer>> result = new ArrayList<>();
-
+        List<List<Integer>> ans = new ArrayList<>();
         if (nums == null || nums.length < 3) {
-            return result;
+            return ans;
         }
-
-        //排序
+        // 排序
         Arrays.sort(nums);
-
-        for (int i = 0; i < nums.length; i++) {
-
+        int n = nums.length;
+        for (int i = 0; i < n - 2; i++) {
             if (nums[i] > 0) {
                 break;
             }
             if (i > 0 && nums[i] == nums[i - 1]) {
                 continue;
             }
-
-            int begin = i + 1;
-            int end = nums.length - 1;
-
-            while (begin < end) {
-                int sum = nums[i] + nums[begin] + nums[end];
-                if (sum == 0) {
-                    List<Integer> list = new ArrayList<>();
-                    list.add(nums[i]);
-                    list.add(nums[begin]);
-                    list.add(nums[end]);
-                    result.add(list);
-                    begin++;
-                    end--;
-
-                    while (begin < end && nums[begin] == nums[begin - 1]) {
-                        begin++;
+            int left = i + 1, right = n - 1;
+            int target = -nums[i];
+            while (left < right) {
+                if (nums[left] + nums[right] == target) {
+                    ans.add(new ArrayList<>(Arrays.asList(nums[i], nums[left],nums[right])));
+                    left++;
+                    right--;
+                    while (left < right && nums[left] == nums[left - 1]) {
+                        left++;
                     }
-                    while (begin < end && nums[end] == nums[end + 1]) {
-                        end--;
+                    while (left < right && nums[right] == nums[right + 1]) {
+                        right--;
                     }
-
-                } else if (sum > 0) {
-                    end--;
+                } else if (nums[left] + nums[right] < target) {
+                    left++;
                 } else {
-                    begin++;
+                    right--;
                 }
             }
         }
-        return result;
+        return ans;
     }
 }
