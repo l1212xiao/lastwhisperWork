@@ -63,19 +63,20 @@ public class DayOfYear {
     }
 
     public static void main(String[] args) {
-        // LocalDate localDate = LocalDate.now();
-        // System.out.println(localDate.getYear() + ":" + localDate.getDayOfYear() + ":" + localDate.getMonth());
-        String preArrivalTime = "2022-06-20";
-        System.out.println(preArrivalTime.length());
-        if (preArrivalTime.length() <= 10) {
-            preArrivalTime += " 00:00:00";
-        }
-        LocalDateTime pTime = parseStringToLocalDateTime(preArrivalTime);
-        if (localTime2EpochMilli(pTime) < getTimestapmOfDaysAgo(2)) {
-            System.out.println(" Filter ");
-        } else {
-            System.out.println(" yes");
-        }
+         LocalDate localDate = LocalDate.now();
+         System.out.println(localDate.getYear() + ":" + localDate.getDayOfYear() + ":" + localDate.getMonth());
+
+//        String preArrivalTime = "2022-06-20";
+//        System.out.println(preArrivalTime.length());
+//        if (preArrivalTime.length() <= 10) {
+//            preArrivalTime += " 00:00:00";
+//        }
+//        LocalDateTime pTime = parseStringToLocalDateTime(preArrivalTime);
+//        if (localTime2EpochMilli(pTime) < getTimestapmOfDaysAgo(2)) {
+//            System.out.println(" Filter ");
+//        } else {
+//            System.out.println(" yes");
+//        }
 
     }
 }
