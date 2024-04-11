@@ -8,7 +8,7 @@ import java.time.Period;
 /**
  * @author lvyunxiao
  * @date 2023/6/2
- * @description
+ * @description 贷款还款查询
  */
 public class SimpleLoad {
 
@@ -18,7 +18,7 @@ public class SimpleLoad {
 		String firstLoadMonth = "2022-10-01";
 
 		// 当前月数，最近需要还款的日期
-		String curMonth = "2023-11-01";
+		String curMonth = "2024-05-01";
 
 		// 最后一期
 		// String lastLoadMonth = "2047-09-06";
@@ -37,13 +37,15 @@ public class SimpleLoad {
 		// double loanAmountC = 158_3123.03D; // 当前待还款金额  // 2023-07-03
 		// double loanAmountC = 157_7349.86D; // 当前待还款金额  // 2023-09-06
 		// double loanAmountC = 1_574_404.37D; // 当前待还款金额  // 2023-10-09 每月 9189.17
-		// double loanAmountC = 1_374_404.37D; // 当前待还款金额  // 预设
+		// double loanAmountC = 1_347_212.11D; // 当前待还款金额  // 2024-04-10 每月 7953.66
 		double loanAmountC = 100_0000.0D; // 目标金额，理想 每月 5836.6
+
+		// double loanAmountC = 50_0000.0D; // 公积金贷款
 
 		System.out.println("剩余贷款本金：" + formatAmt(loanAmountC));
 		// 月利率
-		double yearInterestC = 4.75; // 商业贷款年利率
-		// double yearInterestC = 3.10; // 公积金贷款年利率
+		// double yearInterestC = 4.75; // 商业贷款年利率
+		double yearInterestC = 3.10; // 公积金贷款年利率  // 公积金每月2003
 		double monthlyInterestC = (yearInterestC / 12D) / 100D; // 月利率
 		// 还款月数
 		// double allMonth = 300; // 初始还款月数
@@ -55,7 +57,7 @@ public class SimpleLoad {
 		// 总还款金额
 		double totalPaymentC_ECT = monthlyPaymentC_ECT * allMonth;
 
-		System.out.println("每月需要还款：" + formatAmt(monthlyPaymentC_ECT));
+		System.out.println("每月需要还款：【" + formatAmt(monthlyPaymentC_ECT) + "】");
 
 		System.out.println("共需还款利息：" + formatAmt(totalPaymentC_ECT - loanAmountC));
 
