@@ -38,14 +38,18 @@ public class SimpleLoad {
 		// double loanAmountC = 157_7349.86D; // 当前待还款金额  // 2023-09-06
 		// double loanAmountC = 1_574_404.37D; // 当前待还款金额  // 2023-10-09 每月 9189.17
 		// double loanAmountC = 1_347_212.11D; // 当前待还款金额  // 2024-04-10 每月 7953.66
-		double loanAmountC = 100_0000.0D; // 目标金额，理想 每月 5836.6
+		// double loanAmountC = 1_347_212.11D; // 当前待还款金额  // 2024-04-10 每月 7953.66
+		// double loanAmountC = 1_233_730.48D; // 目前目标还款金额  // 2024-06-10 每月 7363.28
+		// double loanAmountC = 1_123_730.48D; // 目前目标还款金额  // 2024-08-01 每月 66xx
+		// double loanAmountC = 100_0000.0D; // 2024年底目标金额，理想 每月 5836.6
+		double loanAmountC = 50_0000.0D; // 2024年底目标金额，理想 每月 5836.6
 
 		// double loanAmountC = 50_0000.0D; // 公积金贷款
 
 		System.out.println("剩余贷款本金：" + formatAmt(loanAmountC));
 		// 月利率
-		// double yearInterestC = 4.75; // 商业贷款年利率
-		double yearInterestC = 3.10; // 公积金贷款年利率  // 公积金每月2003
+		double yearInterestC = 4.75; // 商业贷款年利率
+		// double yearInterestC = 3.10; // 公积金贷款年利率  // 公积金每月2003
 		double monthlyInterestC = (yearInterestC / 12D) / 100D; // 月利率
 		// 还款月数
 		// double allMonth = 300; // 初始还款月数

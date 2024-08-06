@@ -27,7 +27,8 @@ public class SougouImgPipeline {
 
     public SougouImgPipeline() {
         // setPath("E:/pipeline/sougou");
-        setPath("/Users/lyx/Documents/sogou/img");
+        // setPath("/Users/lyx/Documents/sogou/img");
+        setPath("C:/MyDownload/Myss/img");
         suc = new AtomicInteger();
         fails = new AtomicInteger();
     }
